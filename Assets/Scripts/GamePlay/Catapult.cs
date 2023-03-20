@@ -71,6 +71,7 @@ public class Catapult : MonoBehaviour
             rigidbody = _currentBird.AddComponent<Rigidbody2D>();
         rigidbody.gravityScale = 1;
         rigidbody.AddForce(direction.normalized * _impulse * force, ForceMode2D.Impulse);
+        _currentBird = null;
     }
 
 #if UNITY_EDITOR
